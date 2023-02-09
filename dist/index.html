@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>To-Do List</title>
-	<link rel="stylesheet" href="src/styles.css"></link>
+	<link rel="stylesheet" href="/styles.dd855970.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat&display=swap" rel="stylesheet">
-</head>
+<script src="/styles.dd855970.js"></script></head>
 <body id="body">
 	<div class="main-container-border">
 		<div class="main-container">
@@ -28,7 +28,7 @@
 					</div>
 
 					<div class="form-input">
-						<input class="stretch input-item stylized-box" id="task-name-input"text">
+						<input class="stretch input-item stylized-box" id="task-name-input" text"="">
 
 						<select class="stretch input-item stylized-box" id="task-priority-input" name="priority">
 							<option value="LOW">Low Priority</option>
@@ -49,23 +49,17 @@
 		</div>
 	</div>
 
-	<script>
-		let itemsRemoved = 0;
+	<script>var itemsRemoved = 0;
+function RemoveTask(taskCount, taskName, taskPriority) {
+  document.getElementById("todo-container").removeChild(document.getElementById("".concat(taskCount, "-obj")));
+  var data = localStorage.getItem("userData");
+  var userData = JSON.parse(data);
+  itemsRemoved += 1;
+  userData["tasks"].splice(taskCount - itemsRemoved, 1);
 
-		function RemoveTask(taskCount, taskName, taskPriority) {
-			document.getElementById("todo-container").removeChild(document.getElementById(`${taskCount}-obj`));
-			
-			const data = localStorage.getItem("userData");
-			const userData = JSON.parse(data);
-
-			itemsRemoved += 1;
-
-			userData["tasks"].splice(taskCount - itemsRemoved, 1);
-
-			// Store the object into storage
-			localStorage.setItem("userData", JSON.stringify(userData));
-		}
-	</script>
-	<script src="src/index.js"></script>
+  // Store the object into storage
+  localStorage.setItem("userData", JSON.stringify(userData));
+}</script>
+	<script src="/src.a2b27638.js"></script>
 </body>
 </html>

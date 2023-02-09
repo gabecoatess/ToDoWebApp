@@ -68,7 +68,7 @@ function CreateTask() {
   userData["tasks"].push({
     id: userData["tasks"].length + 1,
     name: taskName,
-    priority: taskPriority
+    priority: taskPriority,
   });
 
   localStorage.setItem("userData", JSON.stringify(userData));
@@ -83,7 +83,7 @@ function ReadCookies() {
   if (localStorage.getItem("userData") === null) {
     // Create an object
     const userData = {
-      tasks: []
+      tasks: [],
     };
     // Store the object into storage
     localStorage.setItem("userData", JSON.stringify(userData));
