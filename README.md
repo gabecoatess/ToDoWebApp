@@ -15,7 +15,7 @@ I highly doubt a tutorial is needed, but here we go.
 4. When the task is completed, click "Finish".
 
 ### Things Used
-HTML5
-CSS
-JavaScript
-Midjourney AI
+- HTML5
+- CSS
+- JavaScript
+- Midjourney AI
